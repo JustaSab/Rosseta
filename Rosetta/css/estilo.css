@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+  background-color: #2999BF;
+   /* background-image:url('../img/chao03.png');
+    background-size:cover;*/
+}
+
+.telaJogo{
+    width: 100%;
+    height:500px;
+    border-bottom:20px solid #2999BF;
+    margin:0 auto;
+    position:relative;
+    overflow:hidden;
+    background-image:url('../img/fundo04.png');
+    background-size:cover;
+}
+
+.coral{
+    position: absolute;
+    bottom:0;
+    width:110px; /*até 180 a estrela consegue pular*/
+    animation:coral-animation 1.5s infinite linear;
+
+}
+
+.estrela{
+    position: absolute;
+    width: 150px;
+    bottom:0px;
+}
+
+/*substituto do keyframe*/
+/*.estrela.jump{
+    bottom: 100px;
+}*/
+
+/*.jump {
+    animation:jump 1s linear;
+}
+*/
+
+.jump{
+    animation:jump 500ms ease-out; /*ANIMAÇÃO DO PULO */
+  }
+
+
+/*a classe sol vem aqui se for colocar mais pra frente*/
+
+.inicio{
+
+    margin-top: 10px;
+    margin-left:45%;
+    width:150px;
+    height:70px;
+    background: #FBE83E;
+    font-size:20px;
+    border-radius: 12px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.inicio:hover{
+    background-color: #F4D07F;
+    color:white;
+    border-color: white;
+}
+
+  
+
+@keyframes coral-animation{
+    from{
+        right:-80px;
+    }
+    to{
+        right:100%;
+    }
+}
+
+@keyframes jump{
+    0% { 
+      bottom: -550px; 
+    }
+    40%{ 
+      bottom: 180px; 
+    }
+    50%{ 
+      bottom: 180px; 
+    }
+    60%{ 
+      bottom: 180px;
+    }
+    100% {
+      bottom: 0px; 
+    }
+  }
